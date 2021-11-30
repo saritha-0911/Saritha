@@ -1,22 +1,21 @@
 #include<studio.h>
-
-int main ()
+int main
 {
- int div,sub;
- printf("Enter the class obtained by the student:");
- scanf(" %d", &div);
+  int numrows=0;
+  printf("enter the number of rows:");
+  scanf("%d", & numrows);
+  int sum=1;
+
+for (int rowno=1; rowno<= numrows;rowno++)
+{
+  for(int colno=1; colno<=rowno; colno++)
+  {
+    printf ("%02d", sum++);
+  }
+  printf ("\n");
+}
+   
  
- printf("Enter the number of subjects in which he has failed:");
- scanf("%d",&sub);
 
- switch(div)
- {
-   // for first class students
-  case 1:
-        if (sub<=3)
-           printf("He got the grace of %d marks",5*sub);
-        else
-           printf("He didn't get any grace");
 
- return 0;
 }
