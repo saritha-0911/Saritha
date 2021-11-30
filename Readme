@@ -1,19 +1,32 @@
-#include<studio.h>
-int main
-{
-  int numrows=0;
-  printf("enter the number of rows:");
-  scanf("%d", & numrows);
-  int sum=1;
+#include<stdio.h>
 
-for (int rowno=1; rowno<= numrows;rowno++)
+int main()
 {
-  for(int colno=1; colno<=rowno; colno++)
-  {
-    printf ("%02d", sum++);
-  }
-  printf ("\n");
+    int num,rem,sum=0,
+    clrsor();
+    printf ("enter any number\n");
+    scanf("%d", &num);
+    do
+     {
+       rem=num%10;
+       sum=sum+rem;
+       num=num/10;
+      }
+    while(num!=0);
+    printf ("sum of digits=%d",sum);
+    
+    return 0;
 }
+    
+      
+     
+
+
+
+  
+    
+    
+    
    
  
 
