@@ -2,11 +2,21 @@
 
 int main ()
 {
- int a=3,b=5;
- printf("before swapping a is %d and b is %d",a,b);
- a=a+b;
- b=a-b;
- a=a-b;
- printf ("\nAfter swapping is %d and b is %d",a,b);
+ int div,sub;
+ printf("Enter the class obtained by the student:");
+ scanf(" %d", &div);
+ 
+ printf("Enter the number of subjects in which he has failed:");
+ scanf("%d",&sub);
+
+ switch(div)
+ {
+   // for first class students
+  case 1:
+        if (sub<=3)
+           printf("He got the grace of %d marks",5*sub);
+        else
+           printf("He didn't get any grace");
+
  return 0;
 }
